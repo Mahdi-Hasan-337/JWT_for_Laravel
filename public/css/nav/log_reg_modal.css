@@ -1,0 +1,128 @@
+/* ==================== Login Modal & Register Modal ====================*/
+::-webkit-scrollbar{
+    display: none;
+}
+form{
+    padding: 2rem;
+    /* width: 25rem; */
+    border-radius: 1rem;
+    background: white;
+}
+input.form-control:focus {
+    box-shadow: none;
+}
+h2{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+.input-box{
+    position: relative;
+    margin-top: 2.5rem;
+    width: 100%;
+    height: 2rem;
+}
+.input-box input{
+    font-size: 1rem;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 2rem;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 0.094rem solid #aaaaaa;
+}
+.input-box input:focus{
+    border-color: rgb(174, 174, 245);
+}
+.input-box i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.6rem;
+}
+.input-box i.email,
+.input-box i.password{
+    left: 0px;
+    color: #707070;
+    font-size: 1rem;
+}
+.input-box input:focus ~ i.email,
+.input-box input:focus ~ i.password{
+    color: rgb(174, 174, 245);
+}
+.input-box i.pwd_hide{
+    right: 0;
+    font-size: 1.5rem;
+}
+.option-field{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.checkbox{
+    display: flex;
+    column-gap: 0.75rem;
+    white-space: nowrap;
+    font-size: 1rem;
+}
+.checkbox input{
+    accent-color: rgb(174, 174, 245);
+}
+.checkbox label{
+    user-select: none;
+    font-size: 1rem;
+    color: #0b0217;
+    cursor: pointer;
+}
+.button{
+    background: rgb(174, 174, 245);
+    margin-top: 1.5rem;
+    width: 100%;
+    /* padding: 0.6rem 0; */
+    padding: 0.3rem 0;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.login-signup{
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0.94rem;
+}
+.forgot_pass{
+    color: rgb(174, 174, 245);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.forgot_pass:hover{
+    text-decoration: underline;
+}
+.signup-txt{
+    font-size:1rem;
+    text-decoration: none;
+    color: rgb(174, 174, 245);
+}
+.signup-txt:hover{
+    text-decoration: underline;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* padding: 0.5rem 1rem; */
+  background-color: transparent;
+  border: none;
+  font-size:2rem;
+  margin-right:2rem;
+  margin-top:1.5rem;
+}
+.modal-body {
+  position: relative;
+}
+.modal-close-btn:focus,
+.modal-close-btn:active {
+  outline: none;
+}

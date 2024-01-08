@@ -14,7 +14,6 @@ class UserController extends Controller {
     function LoginPage(): View {
         return view('pages.auth.login-page');
     }
-
     function RegistrationPage(): View {
         return view('pages.auth.registration-page');
     }
@@ -24,13 +23,11 @@ class UserController extends Controller {
     function VerifyOTPPage(): View {
         return view('pages.auth.verify-otp-page');
     }
-
     function ResetPasswordPage(): View {
         return view('pages.auth.reset-pass-page');
     }
-
     function LogoutPage(): View {
-        return view('logout-page');
+        return view('pages.logout-page');
     }
 
     /// Register

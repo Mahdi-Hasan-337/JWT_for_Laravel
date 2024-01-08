@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@1,500&display=swap);
+::-webkit-scrollbar{display:none}
+.d-item{text-align:center}
+
+/* Logo */
+.logo{width:3.5rem;height:3.5rem;border-radius:50%;margin-right:1rem}
+.logo-name{font-family:'Roboto Slab',serif;text-transform:uppercase;letter-spacing:.2rem}
+
+/* Login Button */
+.login-btn{font-family:'Roboto Slab',serif;color:#fff;border:solid .1rem #fff;font-weight:700;font-size:1rem;text-transform:uppercase;border-radius:.5rem;margin-right:1rem}
+.login-btn:hover{background:#fff}
+
+/* Register Button */
+.reg-btn{font-family:'Roboto Slab',serif;color:#fff;border:solid .1rem #fff;font-weight:700;font-size:1rem;text-transform:uppercase;border-radius:.5rem}
+.reg-btn:hover{background:#fff}
+
+/* Nav link */
+.nav-link{position:relative;font-family:Poppins,sans-serif;letter-spacing:.1rem;font-size:1rem;text-transform:uppercase;color:#fff!important}
+.nav-link:after{opacity:0;transition:all .2s}
+.nav-link:hover::after{content:'';opacity:1;height:2px;width:100%;background-color:#f5f5f5;position:absolute;bottom:0;left:0}
+.nav-item.active .nav-link {
+    color: red; /* Change this to the desired highlight color */
+}
+.s-icon{display:flex;align-items:center;justify-content:center;height:100%;margin:0rem .5rem}
+.search-icon .btn{color:#fff;}
+.div-search-icon{display:flex;align-items:center;justify-content:center; margin-right: 1rem;}
+#search-menu{width:30rem}
+#search-menu input{width:28rem}
+.element3 .dropdown-toggle::after,.s-li-icon .dropdown-toggle::after{content:none}
+.p-txt{font-size:1.1rem;font-weight:700}
+.p-icon{font-size:1.2rem}
+.p-span{font-size:1.2rem;font-weight:700}
+.centered-dropdown-menu li{line-height:1}
+.profile{display:flex;justify-content:space-between}
+.d-flex.icon-txt{display:flex;align-items:center}
+.reverse{display:flex;align-items:center;justify-content:center}
+.navbar-nav{display:flex;align-items:center;justify-content:center}
+
+.auto-hide{animation:hideAlert 20s forwards}
+@keyframes hideAlert{
+to{opacity:0;display:none}
+}
+.alert-container{position:relative;display:none}
+.alert-container.show{display:block;margin-bottom:1.25rem}
+
+/* Responsive Design */
+
+@media (max-width:992px){
+.reverse{margin:1rem 0rem}
+.dropdown-menu{width:50%;align-items:center;background:#e1e1e1}
+.d-item{text-align:center}
+/* .element3{justify-content:center;flex-direction:column} */
+.login-btn{margin-right:0rem;margin-bottom:1rem; margin-top: 1rem;}
+/* .reg-btn{margin-right:0rem;margin-top:1rem} */
+.d-menu{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.centered-dropdown-menu{left:50%;transform:translateX(-50%)}
+.reverse{display:flex;flex-direction:column;align-items:center;justify-content:center}
+}
+
+.navbar-nav a.active {
+    font-weight: bold; /* Change this to the desired color */
+}

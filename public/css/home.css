@@ -1,0 +1,56 @@
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* Carousel Section */
+.carousel-section {
+    max-height: 35rem;
+    overflow: hidden;
+}
+
+.c-item {
+    height: 35rem;
+    width: 100%;
+}
+
+.c-img {
+    /* height: 100%;
+    width: 100%; */
+    object-fit: contain;
+    filter: brightness(0.7);
+}
+
+.carousel-caption {
+    bottom: 220px;
+    z-index: 2;
+}
+
+.carousel-caption h5 {
+    color: #111;
+    font-size: 45px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+}
+
+.carousel-caption p {
+    color: #111;
+    width: 60%;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.9;
+}
+
+span.carousel-control-prev-icon,
+span.carousel-control-next-icon {
+    color: black !important;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+
+
