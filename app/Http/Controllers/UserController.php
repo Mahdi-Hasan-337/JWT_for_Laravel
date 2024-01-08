@@ -1,15 +1,37 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Helper\JWTToken;
 use App\Mail\OTPMail;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\View\View;
 
 class UserController extends Controller {
+
+    function LoginPage(): View {
+        return view('pages.auth.login-page');
+    }
+
+    function RegistrationPage(): View {
+        return view('pages.auth.registration-page');
+    }
+    function SendOtpPage(): View {
+        return view('pages.auth.send-otp-page');
+    }
+    function VerifyOTPPage(): View {
+        return view('pages.auth.verify-otp-page');
+    }
+
+    function ResetPasswordPage(): View {
+        return view('pages.auth.reset-pass-page');
+    }
+
+    function LogoutPage(): View {
+        return view('logout-page');
+    }
 
     /// Register
     public function UserRegistration(Request $request) {
@@ -82,7 +104,7 @@ class UserController extends Controller {
     function SendOTP(Request $request) {
         try {
             $email = $request->input('email');
-            $otp = rand(10000, 100000);
+            $otp = rand(1000, 9999);
 
             $count = User::where('email', '=', $email)->count();
 
@@ -168,5 +190,10 @@ class UserController extends Controller {
                 'message' => 'Something Went Wrong',
             ], 401);
         }
+    }
+
+    /// logout
+    function UserLogout() {
+        return redirect('/')->cookie('token', '', -1);
     }
 }
