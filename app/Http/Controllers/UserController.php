@@ -26,8 +26,12 @@ class UserController extends Controller {
     function ResetPasswordPage(): View {
         return view('pages.auth.reset-pass-page');
     }
-    function LogoutPage(): View {
-        return view('pages.logout-page');
+    // function LogoutPage(): View {
+    //     return view('pages.logout-page');
+    // }
+
+    function ProfilePage(): View {
+        return view('pages.profile-page');
     }
 
     /// Register
@@ -192,5 +196,41 @@ class UserController extends Controller {
     /// logout
     function UserLogout() {
         return redirect('/')->cookie('token', '', -1);
+    }
+
+    function UserProfile(Request $request) {
+        $email = $request->header('email');
+        $user = User::where('email', '=', $email)->first();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Request Successful',
+            'data' => $user,
+        ], 200);
+    }
+
+    function UpdateProfile(Request $request) {
+        try {
+            $email = $request->header('email');
+            $firstName = $request->input('firstName');
+            $lastName = $request->input('lastName');
+            $mobile = $request->input('mobile');
+            $password = $request->input('password');
+            User::where('email', '=', $email)->update([
+                'firstName' => $firstName,
+                'lastName' => $lastName,
+                'mobile' => $mobile,
+                'password' => $password,
+            ]);
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Request Successful',
+            ], 200);
+
+        } catch (Exception $exception) {
+            return response()->json([
+                'status' => 'fail',
+                'message' => 'Something Went Wrong',
+            ], 200);
+        }
     }
 }

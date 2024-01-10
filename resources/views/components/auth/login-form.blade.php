@@ -41,7 +41,7 @@
             });
             hideLoader()
             if (res.status === 200 && res.data['status'] === 'success') {
-                window.location.href = "/logoutpage";
+                window.location.href = "/userProfile";
             } else {
                 errorToast(res.data['message']);
             }
